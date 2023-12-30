@@ -157,6 +157,40 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
   width: 100%;
 }
 
+.btn-14 {
+  background: #1e8e77;
+  border: none;
+  z-index: 1;
+  color: white;
+}
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #38bba1;
+  background-image: linear-gradient(315deg, #51cdb4 0%, #38bba1 74%);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn-14:hover {
+  color: #ffffff;
+}
+.btn-14:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-14:active {
+  top: 2px;
+}
+
 .container-now {
   display: flex;
   align-items: center;
@@ -866,6 +900,11 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   font-size: 22px;
   margin-left: -28px;
   left: 50%;
+}
+
+.custom-width {
+  width: 80%; /* Adjust the pixel value as needed */
+  align-items: center;
 }
 
 .caption{
