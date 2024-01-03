@@ -65,6 +65,9 @@ html {
   height: auto;
 }
 
+.yellow {
+  color: #9fa3b4 !important;
+}
 
 button {
   margin: 20px;
@@ -123,6 +126,7 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 .btn-3:hover{
    background: transparent;
   box-shadow: none;
+  color: black;
 }
 .btn-3:hover:before {
   height: 100%;
@@ -453,6 +457,11 @@ h6, .h6 {
   letter-spacing: 1px;
   font-size: 18px;
   text-align: center;
+}
+
+.new-changes{
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
 }
 
 .btn {
