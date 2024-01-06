@@ -229,6 +229,15 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
   overflow: hidden; 
 }
 
+.dotted-underline {
+  text-decoration: none;
+  border-bottom: 3px dotted #1e8e77;
+  color: #1e8e77;
+}
+
+/* mark {
+  background-color: #d1ece6 !important; /* Set the background color to yellow */
+} */
 
 .shuffle-container {
   display: flex;
@@ -404,6 +413,10 @@ h1, .h1 {
 h2, .h2 {
   font-size: 42px;
   line-height: 52px;
+}
+
+.newh2{
+  font-size: 35px !important;
 }
 
 h3, .h3 {
