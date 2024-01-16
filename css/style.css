@@ -778,13 +778,6 @@ html {
   color: #9fa3b4 !important;
 }
 
-<<<<<<< HEAD
-
-=======
-button {
-  margin: 20px;
-}
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
 .custom-btn {
   color: #fff;
   border-radius: 5px;
@@ -932,26 +925,17 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 }
 
 /* Style for the accordion box */
-/* .collapse {
+
+
+.collapse {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white; /* Set a background color for better visibility 
-  min-height: 100px; /* Set a minimum height or adjust as needed 
-  overflow: hidden; 
-} */
-
-.dotted-underline {
-  text-decoration: none;
-  border-bottom: 3px dotted #1e8e77;
-  color: #1e8e77;
+  background-color: white;
+  min-height: 100px;
+  overflow: hidden;
 }
 
-<<<<<<< HEAD
-/* mark {
-  background-color: #d1ece6 !important; /* Set the background color to yellow */
-
-=======
 .dotted-underline {
   text-decoration: none;
   border-bottom: 3px dotted #1e8e77;
@@ -960,8 +944,7 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 
 /* mark {
   background-color: #d1ece6 !important; /* Set the background color to yellow */
-} */
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
+
 
 .shuffle-container {
   display: flex;
@@ -988,11 +971,12 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 }
 
 /* Additional styles to make sure the accordion content is visible */
-/* .collapse.show {
+.collapse.show {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
+
 
 /* ########## */
 
@@ -1352,18 +1336,9 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 
 
 body {
-<<<<<<< HEAD
   /* font-family: "Halant", serif; */
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
-=======
-  font-family: "Halant", serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.166667px;
-  line-height: 1.7em;
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
   color: #818385;
   display: flex;
   flex-direction: column;
@@ -1383,7 +1358,6 @@ p {
   color:black;
 }
 
-<<<<<<< HEAD
 a {
   text-decoration: none;
 }
@@ -1395,10 +1369,6 @@ video {
   height   : auto;
 }
 
-.img-new {
-  max-width: none !important;
-
-}
 
 pre {
   overflow: auto;
@@ -1525,9 +1495,10 @@ a:active {
 }
 
 .change-date {
-  padding-top: 40px !important;
+  padding-top: 0px !important;
   text-align: right;
   font-size: 17px !important;
+  
 }
 
 /* headings
@@ -1545,10 +1516,6 @@ h6,
 .h5,
 .h6 {
   font-family: var(--font-2);
-=======
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Avrile Serif SemiBold", sans-serif;
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
   color: #1e8e77;
 }
 
@@ -1596,22 +1563,12 @@ h2,
   font-size: 35px;
 }
 
-<<<<<<< HEAD
 h3,
 .h3 {
   line-height   : 1.0047;
   letter-spacing: -0.01em;
   font-size: 28px;
   font-weight: 300;
-=======
-.newh2{
-  font-size: 35px !important;
-}
-
-h3, .h3 {
-  font-size: 24px;
-  line-height: 34px;
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
 }
 
 h4,
@@ -1771,7 +1728,6 @@ a:hover {
   color: #1e8e77;
 }
 
-<<<<<<< HEAD
 /* horizontal rule
  */
  hr {
@@ -1780,13 +1736,6 @@ a:hover {
   clear       : both;
   margin      : var(--vspace-2) 0 calc(var(--vspace-2) - 1px);
   height      : 0;
-=======
-
-
-.page-title h1 {
-  position: relative;
-  padding-bottom: 30px;
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
 }
 
 hr.fancy {
@@ -2195,18 +2144,8 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 }
 
 .caption{
-<<<<<<< HEAD
   text-align: center !important; 
   color: #4a4a4a !important;
-=======
-  color: #1e8e77; 
-  text-align: center;
-}
-
-.caption2{
-  color: #1e8e77;
-  text-align: right;
->>>>>>> bcff4460a2af4c2fe06452f3f00bc19f368438b7
 }
 
 .info a {
