@@ -188,14 +188,32 @@ html {
  *
  * ------------------------------------------------------------------- */
 
- .col-right{
-  padding-right: 40px !important;
- }
+ .welcome_text {
+  font-size: 3.2rem;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+  width: 100%;
+}
 
- .col-left{
-  padding-left: 40px !important;
- }
- 
+.welcome_text > span {
+  display: inline-block;
+  opacity: 0; /* Initially hide each line */
+  animation: typewriter 4s forwards;
+}
+
+@keyframes typewriter {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1; /* Fade in the line */
+  }
+  90%, 100% {
+    opacity: 1;
+  }
+}
+
 
 /* row 
  */
@@ -984,6 +1002,11 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
   border-bottom: 3px dotted #1e8e77;
   color: #1e8e77;
 }
+.dotted-underline-new {
+  text-decoration: none;
+  border-bottom: 3px dotted #ffffff;
+  color: white;
+}
 
 /* mark {
   background-color: #d1ece6 !important; /* Set the background color to yellow */
@@ -1379,7 +1402,7 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
 
 
 body {
-  /* font-family: "Halant", serif; */
+  font-family: "MetroSans-Regular", serif !important;
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
   color: #818385;
@@ -1391,7 +1414,7 @@ body {
   -webkit-text-size-adjust  : 100%;
   -webkit-font-smoothing    : antialiased;
   -moz-osx-font-smoothing   : grayscale;
-  font-family: var(--font-1);
+  /* font-family: var(--font-1); */
   color      : var(--color-text);
 }
 
