@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="zxx">
 
 <head>
@@ -33,129 +25,120 @@
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  
+
+  <style>
+    body {
+      background-color: #f8f9fa; /* Set a background color */
+      margin: 0; /* Remove default margin */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .header {
+      background-color: #fff; /* Set a background color for the header */
+      padding: 20px; /* Add padding to the header to prevent content from touching the edges */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow to the header */
+      z-index: 1000; /* Set a higher z-index to keep it above other elements */
+    }
+
+    .banner {
+  background-image: url('images/newp/linkedin.png'); /* Set the background image */
+  background-size: cover; /* Cover the entire container */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: calc(100vh - 100px); /* Set the height to fill the viewport minus the header height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.banner-content {
+  text-align: left !important; /* Align text to the left */
+  color: #fff !important;
+  padding: 20px; /* Add padding to the sides */
+  margin-top: 27px !important;
+  margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+
+    .content-wrapper {
+      padding: 20px;
+    }
+
+    .redirect-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Style for the specific h1 element */
+    .page-heading-title {
+      color: #ffffff; /* Your desired color */
+    }
+  </style>
 
 </head>
 
 <body>
-  
-<!-- Navigation Start -->
-<!-- Header Start --> 
+  <!-- Header Start -->
+  <div class="header">
+    <nav class="navbar navbar-expand-lg main-nav" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="" class="img-logo">
+        </a>
 
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="ti-align-justify"></span>
+        </button>
 
-<!-- ############################################################### -->
-<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
-	<div class="container">
-	  <a class="navbar-brand" href="index.html">
-	  	<img src="images/logo.png" alt="" class="img-logo">
-	  </a>
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav ml-auto">
+            <li><a class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="now.html">Now</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Header End -->
 
-	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="ti-align-justify"></span>
-	  </button>
+  <!-- Banner Start -->
+  <div class="banner">
+    <div class="banner-content">
+      <!-- ## pageheader -->
+      <h1 class="page-title page-heading-title" style="line-height: 1.7; font-size: 70px;"> 
+        Innovating at the intersection of <br>
+        <a href="map.html" class="dotted-underline-new page-heading-title" >social tech + <br> sustainable development</a> <br>
+        for purposeful design
+      </h1>
+    </div>
+  </div>
+  <!-- Banner End -->
 
-		  <div class="collapse navbar-collapse" id="navbarsExample09">
-			<ul class="navbar-nav ml-auto">
+  <!-- Footer End -->
 
-			  <!-- <li class="nav-item  active"><a class="nav-link" href="index.html">Home</a></li> -->
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <!-- <script src="plugins/bootstrap/bootstrap.min.js"></script> -->
+  <script src="plugins/aos/aos.js"></script>
+  <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+  <script src="plugins/shuffle/shuffle.min.js"></script>
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/animated-text/animated-text.js"></script>
+  <script src="plugins/counto/apear.js"></script>
+  <script src="plugins/counto/counTo.js"></script>
 
-			  <li><a class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+  <!-- Google Map -->
+  <script src="plugins/google-map/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> 
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
 
-			  <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
-
-			  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-
-			  <li class="nav-item"><a class="nav-link" href="now.html">Now</a></li>
-
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<!-- Header Close --> 
-
-
-<!-- Navigation ENd -->
-
-<!-- Banner Start -->
-
-<article class="s-content">
-
-	<!-- ## pageheader -->
-	<section style="padding-bottom: 0px !important; margin-bottom: 0px !important">
-		<div class="row">
-			<div class="column xl-12" style="padding-bottom: 0px !important; margin-bottom: 0px !important">
-				<br>
-				<h1 class="page-title" style ="padding-bottom: 0px; margin-bottom: 0px">                        
-					I am 
-					<a href="about.html" class="dotted-underline">Helen,</a> 
-					a sustainable HCI designer<br><br>
-				</h1>                    
-			</div>
-		</div>
-	</section> 
-
-	<section>
-		<div class="row">
-			<div class="column xl-12">
-				<div class="menu-block">
-					<div class="menu-block__group">
-						<h3 style="text-align: center;">
-							Exploring
-							<a href="experiences.html" class="dotted-underline">intersection of tech and sustainability</a>
-							through responsible design
-						</h3>
-					</div>
-				</div>
-			</div>
-				
-			<br><br>
-				<div class="container">
-					<div class="row">
-						<div>
-						<img src="images/portfolio/big.png" alt="Environmental Science Major" class="img-fluid mb-3">
-						</div>
-					</div>
-					
-					<!-- <div class="row justify-content-end">
-						<div class="col-lg-4 text-right">
-							<a href="#collapseText" data-toggle="collapse" aria-expanded="false" aria-controls="collapseText">
-								<img src="images/portfolio/why.png" alt="Environmental Science Major" class="question">
-							</a>
-						</div>
-					</div>	 -->
-					<!-- <div class="collapse">
-						<div class="col-lg-12 mind-map";>
-							<p>
-								A mind map!<br><br>Mapping my interests within the environmental and computer sciences and watching it convene together through design
-							</p>
-						</div>
-					</div> -->
-    			</div>
-    		</div>
-			
-</section>
-  
-
-
-  
-<!-- Footer End -->
-
-<!-- jQuery -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<!-- <script src="plugins/bootstrap/bootstrap.min.js"></script> -->
-<script src="plugins/aos/aos.js"></script>
-<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-<script src="plugins/shuffle/shuffle.min.js"></script>
-<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="plugins/animated-text/animated-text.js"></script>
-<script src="plugins/counto/apear.js"></script>
-<script src="plugins/counto/counTo.js"></script>
-
- <!-- Google Map -->
-<script src="plugins/google-map/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
-<!-- Main Script -->
-<script src="js/script.js"></script>
+</body>
 
 </html>
