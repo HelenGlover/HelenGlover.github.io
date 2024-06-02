@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="zxx">
-
 <head>
   <meta charset="utf-8">
   <title>Helen Y. Glover</title>
-
-  <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
   <link rel="stylesheet" href="plugins/counto/animate.css">
@@ -27,140 +13,224 @@
   <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
-
-  <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .column {
+        margin-bottom: 20px;
+    }
+
+    .img-column {
+        flex: 0 0 25%; /* Reduce width to 20% */
+        margin-right: 30px; /* Reduce right margin */
+    }
+
+    .img-column img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px; /* Reduce spacing between images */
+        display: block;
+    }
+
+    .text-column {
+        flex: 1; /* Take up remaining space */
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .scroll-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #1e8e77;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: bounce 2s infinite;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .scroll-btn:hover {
+        background-color: white;
+        color: #1e8e77;
+    }
+
+    .footer {
+        padding: 20px 0;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
   
-<!-- Navigation Start -->
-<!-- Header Start --> 
-<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
-	<div class="container">
-	  <a class="navbar-brand" href="index.html">
-	  	<img src="images/logo.png" alt="" class="img-logo">
-	  </a>
-
-	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="ti-align-justify"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="navbarsExample09">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-			<li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
-			<li class="nav-item"><a class="nav-link" href="growth.html">Growth</a></li>
-			<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-			<!-- New list item for the question mark -->
-			<li class="nav-item question-mark">
-				<a class="nav-link" href="curious.html" style="padding: 10px;">?</a>
-			</li>
-		</ul>
-	</div>	
-	</div>
+<nav class="navbar navbar-expand-lg main-nav" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" class="img-logo">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="ti-align-justify"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="growth.html">Growth</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item question-mark">
+                    <a class="nav-link" href="curious.html" style="padding: 10px;">?</a>
+                </li>
+            </ul>
+        </div>    
+    </div>
 </nav>
 
-
-<!-- Header Close --> 
-
 <section class="page-title section pb-0">
-	<div class="container">
-	  <div class="row">
-		<div class="col-lg-12">
-		  <div class="text-center">
-			<h1 class="text-capitalize mb-0 text-lg">A bio in 5 minutes</h1>
-		  </div>
-		  <br>
-		</div>
-	  </div>
-	</div>
-  </section>
-
-
-<!-- Navigation ENd -->
-
-<!-- Banner Start -->
-<section>
-	<div class="row width-narrower content-block">
-	  <div class="column xl-12" style="text-align: left">
-		<p><b>Hello.</b> You probably seen the 10 second bio (a nice, quick conversation starter) and the 1 minute (a nice first introduction). Welcome to the more detailed and therefore, more 
-	personal page about myself. </p>
-
-		<br>
-		<h3>My strengths</h3>
-		<p> <ul>
-			<li>Strategic Communications: I am experienced in crafting and delivering clear, 
-				compelling messages that align with organizational goals. I have worked in multiple communication roles, 
-				effectively engaging target audiences, enhancing brand identity, and recognizing areas for growth.</li>
-			<li>Social Innovation: I am committed to leveraging innovation and creativity to implement solutions for 
-				societal challenges. I have supported the visioning, implementing, and managing of new programs.</li>
-			<li>Strategic Thinking: My ability to think strategically and integrate holistic, long-term sustainability 
-				principles into my work demonstrates I can analyze complex situations and formulate effective long-term strategies.</li>
-			<li>
-				Community Engagement: I believe in building relationships with stakeholders to foster collaboration and collective action. 
-				I have successfully connected diverse individuals and organizations to drive meaningful impact.
-			</li>
-			</ul>
-			</p>
-
-		<br>
-		<h3>Animating Questions</h3>
-		<p>
-			Guided by my main question, "How can we co-create a society that is ecologically sound, socially just, and economically viable?" in my career, I seek to understand and explore other animating questions:
-		<ul>
-			<li>How can we use sustainability as an integrative approach that addresses technological and human needs?</li>
-			<li>How can we apply sustainability's restoration, regeneration, and resilience elements within the world of technology?</li>
-		</ul>
-
-		<h3>More about me</h3>
-		<ul>
-			<li>My family and I run an organic family farm for young adults with disabilities. We were inspired by my older brother, who 
-				has Down syndrome and autism, to create a community where youth felt welcomed and supported. Our farm has organic gardens, 
-				free-range animals, and lots of chickens.
-			</li>
-			<li>I was considering going to art school as an undergraduate to major in illustration. I decided to go to Smith College, 
-				but I still keep up my art interests through my design work.
-			</li>
-			<li>I am an early morning riser (around 4 to 5 a.m.). A habit from farm life, I use mornings to prioritize my 
-				personal and professional growth goals.
-			</li>
-			<li>I read the terms of conditions for fun. There are a lot of things you are agreeing to…
-			</li>
-		</ul>
-
-	  </div>
-	</div>
-</section>
-
-
-<!-- Footer strat -->
-<section class="footer">
-    <div class="container text-white">
-        <div class="row-new">
-            <div class="col-lg-5">
-                <p class="nav-item"><a class="nav-link" href="thankyou.html">Thank You</a></li></p>
-            </div>
-            <div class="col-lg-3 text-white">
-                <p>
-                    <a href="mailto:hglover@smith.edu" target="_blank">Email</a>
-                    <span class="footer-divider"></span>
-                    <a href="https://www.linkedin.com/in/helen-glover/" target="_blank" class="text-white">LinkedIn</a>
-                </p>
-            </div>
-            <div class="col-lg-4">
-				<p class=" text-white">Coded with ❤️ ☕ and <a href="https://www.themefisher.com" class="text-white">ThemeFisher</a></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h1 class="text-capitalize mb-0 text-lg">A bio in 5 minutes</h1>
                 </div>
+                <br>
             </div>
         </div>
     </div>
 </section>
-<!-- Footer end -->
 
-<!-- jQuery -->
+<section>
+    <div class="row width-narrower content-block">
+        <div class="column xl-12" style="text-align: left">
+            <p><b>Hello.</b> You probably seen the 10 second bio (a nice, quick conversation starter) and the 1 minute (a nice first introduction). Welcome to the more detailed and therefore, more personal page about myself.</p>
+            <br>
+            <h3>Animating Questions</h3>
+            <p>
+                Guided by my main question, "How can we co-create a society that is ecologically sound, socially just, and economically viable?" in my career, I seek to understand and explore other animating questions:
+            </p>
+            <ul>
+                <li>How can we use sustainability as an integrative approach that addresses technological and human needs?</li>
+                <li>How can we apply sustainability's restoration, regeneration, and resilience elements within the world of technology?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row width-narrower content-block">
+        <div class="column img-column">
+            <img src="images/sheep.jpg" alt="Sheep" class="img-fluid">
+            <img src="images/chicken.jpg" alt="Chicken" class="img-fluid">
+        </div>
+        <div class="column text-column">
+            <h3>More about me</h3>
+            <ul>
+				<li>I mostly talk about technology or sustainability, but I also love learning psychology and cognitive science.
+					My work is inspired by the teachings of practitioners
+					<a href="pyschology.html" style="color: #1e8e77; text-decoration: underline;">teachings of practitioners</a> in these fields.
+					</li>
+                <li>My family and I run an organic family farm for young adults with disabilities. We were inspired by my older brother, who has Down syndrome and autism, to create a community where youth felt welcomed and supported. Our farm has organic gardens, free-range animals, and lots of chickens.</li>
+                <li>I was considering going to art school as an undergraduate to major in illustration. I decided to go to Smith College, but I still keep up my art interests through my design work.</li>
+                <li>I am an early morning riser (around 4 to 5 a.m.). A habit from farm life, I use mornings to prioritize my personal and professional growth goals.</li>
+                <li>I read the terms of conditions for fun. There are a lot of things you are agreeing to…</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="scroll-btn" onclick="scrollPage()">
+    ↓
+</div>
+
+<script>
+    const scrollBtn = document.querySelector('.scroll-btn');
+    let atBottom = false;
+
+    function scrollPage() {
+        if (!atBottom) {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        atBottom = window.scrollY >= scrollableHeight - 1;
+        scrollBtn.textContent = atBottom ? '↑' : '↓';
+    });
+</script>
+
+<section class="footer">
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-lg-4">
+                <p class="nav-item"><a class="nav-link" href="thankyou.html">Thank You</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <p class=" text-white">© 2024 Helen Glover</p>
+            </div>
+            <div class="col-lg-4 text-right">
+                <p>
+                    <a href="mailto:helen_glover@outlook.com" target="_blank">Email</a>
+                    <span class="footer-divider"></span>
+                    <a href="https://www.linkedin.com/in/helen-glover/" target="_blank" class="text-white">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
 <script src="plugins/aos/aos.js"></script>
 <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
@@ -169,11 +239,8 @@
 <script src="plugins/animated-text/animated-text.js"></script>
 <script src="plugins/counto/apear.js"></script>
 <script src="plugins/counto/counTo.js"></script>
-
- <!-- Google Map -->
 <script src="plugins/google-map/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
-<!-- Main Script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
 <script src="js/script.js"></script>
-
-</html> 
+</body>
+</html>
