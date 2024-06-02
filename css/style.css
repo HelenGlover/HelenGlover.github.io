@@ -209,11 +209,6 @@ html {
   margin: 0px !important;
 }
 
-.button-wrapper{
-  
-  margin-top: 20px;
-}
-
 .welcome_text > span {
   display: inline-block;
   opacity: 0; /* Initially hide each line */
@@ -814,10 +809,68 @@ html {
   color: #9fa3b4 !important;
 }
 
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button-wrapper {
+  text-align: center;
+  width: 250px;
+}
+
+.button-wrapper p {
+  margin-top: 10px;
+}
+
+/* .custom-btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+} */
+
+/* Dropdown Menu Styles */
+.dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown {
+  width: 30%;
+  margin: 10px;
+}
+
+.dropdowns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .custom-btn {
   color: #fff;
+  text-align: center;
   border-radius: 5px;
-  padding: 10px 25px;
+  /* padding: 10px 25px; */
   font-size: 20px;
   font-weight: 500;
   background: transparent;
@@ -915,7 +968,7 @@ background: linear-gradient(0deg,  #29a78e 0%,  #1e8e77 100%);
   padding-top: 7px;
 }
 .btn-5:hover {
-  color: #2da189;
+  color: #1e8e77;
   background: transparent;
    box-shadow:none;
 }

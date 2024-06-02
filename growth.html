@@ -69,12 +69,13 @@
         <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
         <li class="nav-item"><a class="nav-link" href="growth.html">Growth</a></li>
-        <li class="nav-item"><a class="nav-link" href="now.html">Now</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <!-- New list item for the question mark -->
-        <li class="nav-item question-mark"><a class="nav-link" href="curious.html">?</a></li>
+        <li class="nav-item question-mark">
+          <a class="nav-link" href="curious.html" style="padding: 10px;">?</a>
+        </li>
       </ul>
-    </div>
+    </div>	
     
   </div>
 </nav>
@@ -103,39 +104,83 @@
   <div class="row width-narrower content-block">
     <div class="column xl-12">
         <p style="text-align: center;">
-          Mapping my interests within the environmental and computer sciences in connection to design</p>
-          <img src="images/portfolio/big.png" alt="Map of intersecting interests" style="height: 500px; width: 1200px;">
-  
+          I sit at the intersection of design, sustainability, and technology. Combining them into a cohensive career is a exciting and enriching experience.
 
-      <div class="buttons-container">
-        <div class="button-wrapper">
-          <a href="https://www.figma.com/file/FUtPrKDPHMRDDXn4gcx5eb/Untitled?type=design&node-id=0%3A1&mode=design&t=mkQdooisICOsC8tK-1" class="custom-btn btn-14">
-            <span>Idea Playground</span>
+          My work fits under the umbrellas of UX design, human computer interaction, and sustainable development.</p>
+          <!-- Dropdowns Section Start -->
+      
+<section class="dropdowns-container">
+  <div class="dropdown" onclick="toggleDropdown('dropdown-content-1')">
+    <div class="dropdown-container">
+      <span>Defining Sustainability</span>
+      <span class="icon">+</span>
+    </div>
+    <div id="dropdown-content-1" class="dropdown-content">
+      <p>Sustainability is a holistic approach that tackles complex social, economic, and environmental challenges through 
+        interdisciplinary solutions. I believe the most effective sustainable outcomes are not the quickest or most 
+        buzz-worthy ideas, but those rooted in systemic thinking for societal transformation. Additionally, I am 
+        interested in how we communicate and build sustainability activism, particularly through visual storytelling. 
+        My interest stems from my experience in environmental internships and interdisciplinary courses in landscape 
+        studies, design, and ecology.</p>
+    </div>
+  </div>
+
+  <div class="dropdown" onclick="toggleDropdown('dropdown-content-2')">
+    <div class="dropdown-container">
+      <span>Defining Technology</span>
+      <span class="icon">+</span>
+    </div>
+    <div id="dropdown-content-2" class="dropdown-content">
+      <p>In this techno-solutionist society, technology is seen as the primary driver for solving complex problems 
+        and achieving progress, often overshadowing the importance of human-centered approaches and social 
+        considerations. I am particularly interested in the relationship between content moderation and internet
+        censorship, specifically within educational settings and the digital landscape of play. My interest stems 
+        from my ethnographic research into youth digital rights.</p>
+    </div>
+  </div>
+
+  <div class="dropdown" onclick="toggleDropdown('dropdown-content-3')">
+    <div class="dropdown-container">
+      <span>Defining HCI Sustainable Design</span>
+      <span class="icon">+</span>
+    </div>
+    <div id="dropdown-content-3" class="dropdown-content">
+      <p>HCI Sustainable Design is the intersection of sustainability and technology through purposeful design. 
+        This approach focuses on building ethical digital platforms and systems that prioritize long-term environmental
+        health and social well-being. By integrating principles of sustainability into the design and development 
+        process, HCI Sustainable Design aims to create technology that supports a sustainable future for both 
+        people and the planet.</p>
+    </div>
+  </div>
+</section>
+<!-- Dropdowns Section End -->
+        
+    <script>
+      function toggleDropdown(id) {
+        var content = document.getElementById(id);
+        content.classList.toggle("show");
+      }
+    </script> <br>
+
+    <img src="images/portfolio/big.png" alt="Map of intersecting interests" style="height: 500px; width: 1200px;">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 0 auto;">
+      <div style="display: flex; align-items: center;">
+        <button class="custom-btn btn-14" style="width: 270px; height: 40px;">
+          <a href="garden.html" style="text-decoration: none; color: white; display: flex; justify-content: center; align-items: center;">
+            The Garden
           </a>
-          <p>Ideas that haven't yet morphed into full-fledged projects</p>
-        </div>
-
-        <div class="button-wrapper">
-          <a href="Learnings.html" class="custom-btn btn-14">
-            <span>Learnings</span>
+        </button>
+        <p style="margin-left: 20px;">Ideas, notes, and half-baked explorations I'm always tending to</p>
+      </div>
+      
+      <div style="display: flex; align-items: center;">
+        <button class="custom-btn btn-14" style="width: 270px; height: 40px;">
+          <a href="research.html" style="text-decoration: none; color: white; display: flex; justify-content: center; align-items: center;">
+            Research
           </a>
-          <p>A collection of resources I love and am sharing in the pursuit for open education</p>
-        </div>
-
-        <div class="button-wrapper">
-          <a href="research.html" class="custom-btn btn-14">
-            <span>Research</span>
-          </a>
-          <p>My research into how people build online communities of belonging and representation</p>
-        </div>
-
-        <div class="button-wrapper">
-          <a href="musings.html" class="custom-btn btn-14">
-            <span>Musings</span>
-          </a>
-          <p>A collection of messy, wonderful ideas</p>
-        </div>
-
+        </button>
+        <p style="margin-left: 20px;">My research into how people build online communities of belonging and representation</p>
       </div>
     </div>
   </div>
