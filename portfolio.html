@@ -13,74 +13,166 @@
   <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #1e8e77;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: bounce 2s infinite;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .scroll-btn:hover {
+      background-color: white;
+      color: #1e8e77;
+    }
+    
+    .password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#password {
+  width: 300px; /* Adjust width as needed */
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Add spacing between input and button */
+}
+
+.password-text {
+  text-align: center;
+  margin-top: 10px; /* Add spacing above the text */
+}
+
+.password-text p {
+  font-size: 14px; /* Adjust font size of the additional text */
+  color: #555; /* Adjust text color */
+}
+
+
+
+    #protected-content {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+  </style>
 </head>
 <body>
-  <div class="site-wrapper d-flex flex-column min-vh-100">
-    <!-- Header Start -->
-    <nav class="navbar navbar-expand-lg main-nav" id="navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="" class="img-logo">
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="ti-align-justify"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
-            <li class="nav-item"><a class="nav-link" href="growth.html">Growth</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <!-- New list item for the question mark -->
-            <li class="nav-item question-mark">
-              <a class="nav-link" href="curious.html" style="padding: 10px;">?</a>
-            </li>
-          </ul>
-        </div>	
-      </div>
-    </nav>
-    <!-- Header Close -->
-
-    <!-- Main content start -->
-    <div class="flex-grow-1">
-      <section class="page-title section pb-0">
+  <div id="password-container" class="password-container">
+    <p style="text-align: center;">
+      Thank you for visiting my portfolio. <br>
+      As a technologist, I prioritize ensuring the security of both work and personal information.
+      If you need access, please reach out via 
+      <a href="mailto:hsdngio@gmail.com?subject=Portfolio%20Password%20Request&amp;body=Hello%2C%20my%20name%20is%20[Name%2C%20organization]%20and%20I%20am%20requesting%20access%20to%20your%20portfolio."
+         style="color: #1e8e77; text-decoration: underline;">email</a>.
+  </p>
+  
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <div class="password-text">
+    </div>
+  </div>
+  
+  
+    <!-- Protected Content Start -->
+    <div id="protected-content">
+      <nav class="navbar navbar-expand-lg main-nav" id="navbar">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h1 class="text-capitalize mb-0 text-lg">Portfolio</h1>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" class="img-logo">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="ti-align-justify"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+              <li class="nav-item"><a class="nav-link" href="growth.html">Growth</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item question-mark">
+                <a class="nav-link" href="curious.html" style="padding: 10px;">?</a>
+              </li>
+            </ul>
+          </div>  
+        </div>
+      </nav>
+      <!-- Header Close -->
+
+      <!-- Main content start -->
+      <div class="flex-grow-1">
+        <section class="page-title section pb-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="text-center">
+                  <h1 class="text-capitalize mb-0 text-lg">Portfolio</h1>
+                </div>
+                <br>
               </div>
-              <br>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Your existing sections -->
-      <section class="portfolio">
-        <article>
-          <section>
+        <!-- Your existing sections -->
+        <section class="portfolio">
+          <article>
             <section>
-              <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
-                  <h1 class="newh2">Case Studies</h1>
+              <section>
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 text-center">
+                    <h1 class="newh2">Case Studies</h1>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <div class="row shuffle-wrapper portfolio-gallery">
-              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
-                <div class="position-relative inner-box">
-                  <a class="overlay-content" href="agile.html">
-                    <div class="image position-relative">
-                      <img src="images/newp/preciousplasticscover.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-                    </div>
-                  </a>
-                  <br>
-                  <b><h3 style="color: #1e8e77; text-align: center;">Designing a website for aGILE</h3></b> 
+              </section>
+              <div class="row shuffle-wrapper portfolio-gallery">
+                <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
+                  <div class="position-relative inner-box">
+                    <a class="overlay-content" href="agile.html">
+                      <div class="image position-relative">
+                        <img src="images/newp/preciousplasticscover.png" alt="portfolio-image" class="img-fluid w-100 d-block">
+                      </div>
+                    </a>
+                    <br>
+                    <b><h3 style="color: #1e8e77; text-align: center;">Designing a website for aGILE</h3></b> 
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;branding&quot;]">
-                <div class="position-relative inner-box">
+                <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;branding&quot;]">
                   <div class="position-relative inner-box">
                     <a class="overlay-content" href="precious-plastics.html">
                       <div class="image position-relative">
@@ -92,287 +184,151 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </article>
-
-        <!-- Additional sections here... -->
-
-      </section>
-    </div>
-    <!-- Main content end -->
-
-    <section class="portfolio">
-      <article>
-        <section>
+            </section>
+          </article>
           <section>
-            <div class="row justify-content-center">
-              <div class="col-lg-12 text-center">
-                <h1 class="newh2">I believe</h1>
-                <div style="display: inline-block; margin-right: 20px;">
-                  <a href="musings.html" target="_blank" style="color: #1e8e77; text-decoration: underline;">How I would describe design</a>
+            <section>
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 text-center">
+                    <h1 class="newh2">Projects</h1>
+                  </div>
                 </div>
-                <div style="display: inline-block; margin-right: 20px;">
-                  <a href="musings.html" target="_blank" style="color: #1e8e77; text-decoration: underline;">Systemic in how we innovate</a>
+              </div>
+            </section>
+            <div class="row shuffle-wrapper portfolio-gallery">
+              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
+                <div class="position-relative inner-box">
+                  <a class="overlay-content" href="agilework.html">
+                    <div class="image position-relative">
+                      <img src="images/newp/copy2.png" alt="portfolio-image" class="img-fluid w-100 d-block">
+                    </div>
+                  </a>
+                  <br>
+                  <b><h3 style="color: #1e8e77; text-align: center;">Design for aGILE</h3></b> 
                 </div>
-                <div style="display: inline-block;">
-                  <a href="musings.html" target="_blank" style="color: #1e8e77; text-decoration: underline;">Visual Storytelling and Design Thinking</a>
+              </div>
+              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
+                <div class="position-relative inner-box">
+                  <a class="overlay-content" href="africachallenge.html">
+                    <div class="image position-relative">
+                      <img src="images/newp/africachallenge.png" alt="portfolio-image" class="img-fluid w-100 d-block">
+                    </div>
+                  </a>
+                  <br>
+                  <b><h3 style="color: #1e8e77; text-align: center;">Design for the Africa Innovation Challenge</h3></b> 
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
+                <div class="position-relative inner-box">
+                  <a class="overlay-content" href="conway.html">
+                    <div class="image position-relative">
+                      <img src="images/newp/copy1.png" alt="portfolio-image" class="img-fluid w-100 d-block">
+                    </div>
+                  </a>
+                  <br>
+                  <b><h3 style="color: #1e8e77; text-align: center;">UN SDGs at Smith</h3></b> 
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
+                <div class="position-relative inner-box">
+                  <a class="overlay-content" href="africachallenge.html">
+                    <div class="image position-relative">
+                      <img src="images/newp/lighthouse.png" alt="portfolio-image" class="img-fluid w-100 d-block">
+                    </div>
+                  </a>
+                  <br>
+                  <b><h3 style="color: #1e8e77; text-align: center;">Makerspaces and Education</h3></b> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <h1 class="newh2">Stay tuned for</h1>
+                </div>
+                <div class="col-lg-8">
+                  <p>Leading a workshop series on innovation with 
+                    <a href="https://www.unite2030.com/" target="_blank" style="color: #1e8e77; text-decoration: underline;">
+                      Unite 2030</a>, a social change nonprofit for the Sustainable Development Goals</p>
+                  <p>Developing a sitemap for Women who Create</p>
+                  <p>Developing a webpage for the <a href="https://www.afors.org" target="_blank" style="color: #1e8e77; text-decoration: underline;">
+                      Alliance for Sustainability </a>with mockups in Figma</p>
+                  <p>Thoughts about with mockups in Figma</p>
                 </div>
               </div>
             </div>
           </section>
         </section>
-      </article>
-    </section>
-    
-
-
-
-<!-- -------------------------------------------------------- --> 
-    <section>
-      <section>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-              <h1 class="newh2">Projects</h1>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-btn" onclick="scrollPage()">
+    ↓
+  </div>
+  <section class="footer">
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="nav-item"><a class="nav-link" href="thankyou.html">Thank You</a></p>
         </div>
-      </section>
-	  <div class="row shuffle-wrapper portfolio-gallery">
-
-		<!-- <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-		  <div class="position-relative inner-box">
-			<a class="overlay-content" href="annualreport.html">
-				<div class="image position-relative">
-				<img src="images/newp/annualreportpdf.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-				</div>
-			</a>
-			<br>
-			<b><h3 style="color: #1e8e77; text-align: center; border: #1e8e77;">Annual Report for aGILE</h3></b> 
-			</div>
-		</div> -->
-
-    <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-      <div class="position-relative inner-box">
-          <a class="overlay-content" href="agilework.html">
-            <div class="image position-relative">
-              <img src="images/newp/copy2.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-            </div>
-            </a>
-            <br>
-            <b><h3 style="color: #1e8e77; text-align: center;">Design for aGILE</h3></b> 
-          </div>
-          </div>
-
-		
-
-		<div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-			<div class="position-relative inner-box">
-				<a class="overlay-content" href="africachallenge.html">
-					<div class="image position-relative">
-					  <img src="images/newp/africachallenge.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-					</div>
-				  </a>
-				  <br>
-				  <b><h3 style="color: #1e8e77; text-align: center;">Design for the Africa Innovation Challenge</h3></b> 
-				</div>
-			  </div>
-
-    		<div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-          <div class="position-relative inner-box">
-            <a class="overlay-content" href="conway.html">
-              <div class="image position-relative">
-                <img src="images/newp/copy1.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-              </div>
-              </a>
-              <br>
-              <b><h3 style="color: #1e8e77; text-align: center;">UN SDGs at Smith</h3></b> 
-            </div>
-            </div>
-
-            <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-              <div class="position-relative inner-box">
-                <a class="overlay-content" href="africachallenge.html">
-                  <div class="image position-relative">
-                    <img src="images/newp/lighthouse.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-                  </div>
-                  </a>
-                  <br>
-                  <b><h3 style="color: #1e8e77; text-align: center;">Makerspaces and Education</h3></b> 
-                </div>
-                </div>
-
-
-        <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-          <div class="position-relative inner-box">
-          <a class="overlay-content" href="plasticmanual.html">
-              <div class="image position-relative">
-                <img src="images/newp/preciousplastics.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-              </div>
-              </a>
-              <br>
-              <b><h3 style="color: #1e8e77; text-align: center;">User Manual for Precious Plastics</h3></b> 
-              </div>
-            </div> 
-          <!-- <div class="col-md-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-              <div class="position-relative inner-box">
-              <a class="overlay-content" href="plasticmanual.html">
-                  <div class="image position-relative">
-                    <img src="images/newp/preciousplastics.png" alt="portfolio-image" class="img-fluid w-100 d-block">
-                  </div>
-                  </a>
-                  <br>
-                  <b><h3 style="color: #1e8e77; text-align: center;">This website of course!</h3></b> 
-                  </div>
-                </div> -->
-              </div>
-            </section>
-<!-- 
-  <section>
-
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-4">
-            <h1 class="newh2">Writing/<br>Presentations</h1>
-          </div>
-          <div class="col-lg-8">
-            <p>A few things I authored/co-authored in college<br>
-              <a href="writing.html" style="color: #1e8e77; text-decoration: underline;">Check them out</a></p>
-          </div>
+        <div class="col-lg-4 text-center">
+          <p class="text-white">© 2024 Helen Glover</p>
+        </div>
+        <div class="col-lg-4 text-right">
+          <p>
+            <a href="mailto:helen_glover@outlook.com" target="_blank">Email</a>
+            <span class="footer-divider"></span>
+            <a href="https://www.linkedin.com/in/helen-glover/" target="_blank" class="text-white">LinkedIn</a>
+          </p>
         </div>
       </div>
     </div>
-  
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-4">
-            <h1 class="newh2">Stay tuned for</h1>
-          </div>
-          <div class="col-lg-8">
-            <p>Leading a workshop series on innovation with 
-              <a href="https://www.unite2030.com/" target="_blank" style="color: #1e8e77; text-decoration: underline;">Unite 2030</a>,
-              a social change nonprofit for the Sustainable Development Goals</p>
-            <p>Developing a webpage for the <a href="https://www.afors.org" target="_blank" style="color: #1e8e77; text-decoration: underline;">
-                Alliance for Sustainability </a>with mockups in Figma</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  
-  
-		
-<style>
-	body {
-		margin: 0;
-		font-family: Arial, sans-serif;
-	}
+  </section>
 
-	.scroll-btn {
-		position: fixed;
-		bottom: 20px;
-		right: 20px;
-		width: 60px;
-		height: 60px;
-		background-color: #1e8e77;
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 24px;
-		cursor: pointer;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		animation: bounce 2s infinite;
-		transition: transform 0.3s, color 0.3s;
-	}
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+  <script src="plugins/shuffle/shuffle.min.js"></script>
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/animated-text/animated-text.js"></script>
+  <script src="plugins/counto/apear.js"></script>
+  <script src="plugins/counto/counTo.js"></script>
+  <script src="plugins/google-map/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <script>
+    const correctPassword = "secret123"; // Set your password here
 
-	@keyframes bounce {
-		0%, 20%, 50%, 80%, 100% {
-			transform: translateY(0);
-		}
-		40% {
-			transform: translateY(-10px);
-		}
-		60% {
-			transform: translateY(-5px);
-		}
-	}
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      if (password === correctPassword) {
+        document.getElementById("password-container").style.display = "none";
+        document.getElementById("protected-content").style.visibility = "visible";
+        document.getElementById("protected-content").style.opacity = "1";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
 
-	.scroll-btn:hover {
-		background-color: white;
-		color: #1e8e77; /* Change arrow color to green when hovered */
-	}
-</style>
+    const scrollBtn = document.querySelector('.scroll-btn');
+    let atBottom = false;
 
-    <div class="scroll-btn" onclick="scrollPage()">
-        ↓
-    </div>
+    function scrollPage() {
+      if (!atBottom) {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
 
-    <script>
-        const scrollBtn = document.querySelector('.scroll-btn');
-        let atBottom = false;
-
-        function scrollPage() {
-            if (!atBottom) {
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        window.addEventListener('scroll', () => {
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            atBottom = window.scrollY >= scrollableHeight - 1;
-            scrollBtn.textContent = atBottom ? '↑' : '↓';
-        });
-    </script>
-
-	<!-- Footer strat -->
-	<section class="footer">
-		<div class="container text-white">
-			<div class="row">
-				<div class="col-lg-4">
-					<p class="nav-item"><a class="nav-link" href="thankyou.html">Thank You</a></p>
-				</div>
-	
-				<div class="col-lg-4 text-center">
-					<p class=" text-white">© 2024 Helen Glover</p>
-				</div>
-	
-				<div class="col-lg-4 text-right">
-					<p>
-						<a href="mailto:helen_glover@outlook.com" target="_blank">Email</a>
-						<span class="footer-divider"></span>
-						<a href="https://www.linkedin.com/in/helen-glover/" target="_blank" class="text-white">LinkedIn</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<!-- Footer end -->
-	
-	<!-- jQuery -->
-	<script src="plugins/jQuery/jquery.min.js"></script>
-	<!-- Bootstrap JS -->
-	<script src="plugins/bootstrap/bootstrap.min.js"></script>
-	<script src="plugins/aos/aos.js"></script>
-	<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-	<script src="plugins/shuffle/shuffle.min.js"></script>
-	<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="plugins/animated-text/animated-text.js"></script>
-	<script src="plugins/counto/apear.js"></script>
-	<script src="plugins/counto/counTo.js"></script>
-	
-	 <!-- Google Map -->
-	<script src="plugins/google-map/map.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
-	<!-- Main Script -->
-	<script src="js/script.js"></script>
-	
-	</html> 
-	
+    window.addEventListener('scroll', () => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      atBottom = window.scrollY >= scrollableHeight - 1;
+      scrollBtn.textContent = atBottom ? '↑' : '↓';
+    });
+  </script>
+</body>
+</html>
