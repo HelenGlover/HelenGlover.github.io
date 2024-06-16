@@ -2001,7 +2001,9 @@ hr.fancy::before {
 }
 
 .navbar-nav .nav-link {
-  padding: 20px 15px !important;
+  padding-left: 0px !important;
+  padding-right: 26px !important;
+  margin-top: 15px;
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 700;
